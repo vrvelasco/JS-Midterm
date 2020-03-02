@@ -1,17 +1,28 @@
-// Global variables
+/* *********************
+ * Global variables
+ * *********************/
 // Create list
 const taskList = [];
+
 // Counter
 let counter = 0;
 
-// Test function
-while (counter < 5) {
+/* *********************
+ * "Main" program
+ * *********************/
+// Test functions
+while (counter < 3) {
   addButton();
 }
+
+removeButton(0);
+
 // Print list
 console.log(taskList);
 
-// Functions
+/* *********************
+ * Functions
+ * *********************/
 function addButton() {
   // Prompt for a list item
   let item = prompt("Please enter an item");
@@ -26,4 +37,8 @@ function addButton() {
 
   // Increment
   counter++;
+}
+
+function removeButton(s) {
+  alert(`"${taskList.splice(s, 1)}" was removed.`);
 }
