@@ -2,7 +2,7 @@
  * Global variables
  * *********************/
 // Create list
-const taskList = [];
+const taskList = {};
 
 // Counter
 let counter = 0;
@@ -40,5 +40,6 @@ function addButton() {
 }
 
 function removeButton(s) {
-  alert(`"${taskList.splice(s, 1)}" was removed.`);
+  alert(`"${taskList[s]}" was removed.`);
+  delete taskList[s];
 }
