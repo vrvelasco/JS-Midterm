@@ -1,21 +1,29 @@
-// Create object
-const taskList = {};
-
+// Global variables
+// Create list
+const taskList = [];
 // Counter
 let counter = 0;
 
-// Prompt for a list item
-let item = prompt("Please enter an item");
-
-// Check for empty response
-while (!item) {
-  item = prompt("Please add at least one character.");
+// Test function
+while (counter < 5) {
+  addButton();
 }
+// Print list
+console.log(taskList);
 
-// Increment
-counter++;
+// Functions
+function addButton() {
+  // Prompt for a list item
+  let item = prompt("Please enter an item");
 
-// Add item to object
-taskList["counter"] = item;
+  // Check for empty response
+  while (!item) {
+    item = prompt("Please add at least one character.");
+  }
 
-// TODO: Add a function to repeat the code. addButton()
+  // Add item to list
+  taskList[counter] = item;
+
+  // Increment
+  counter++;
+}
