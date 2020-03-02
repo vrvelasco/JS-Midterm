@@ -9,6 +9,7 @@ body {
   margin: 20px;
   background-color: #37474f;
   border-radius: 10px;
+  float: left;
 }
 
 #title {
